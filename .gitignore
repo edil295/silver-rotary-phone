@@ -1,0 +1,5 @@
+venv/
+interview/__pycache__/
+tips/__pycache__/
+interview/migrations/__pycache__/
+.idea/
