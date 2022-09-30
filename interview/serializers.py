@@ -9,8 +9,15 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class QuestionAnswerSerializer(serializers.ModelSerializer):
+class QuestionAnswerListSer(serializers.ModelSerializer):
     class Meta:
         model = QuestionAnswer
         fields = '__all__'
-        exclude = ('answer', )
+        extra_kwargs = {'answer': {'write_only': True}}
+
+
+class QuestionAnswerDetailSer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestionAnswer
+        fields = '__all__'
+
