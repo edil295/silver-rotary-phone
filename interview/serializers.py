@@ -16,6 +16,7 @@ class QuestionAnswerListSer(serializers.ModelSerializer):
         extra_kwargs = {'answer': {'write_only': True}}
 
 
+
 class QuestionAnswerDetailSer(serializers.ModelSerializer):
     class Meta:
         model = QuestionAnswer

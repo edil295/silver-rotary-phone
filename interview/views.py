@@ -22,3 +22,9 @@ class QuestionAnswerDetailView(UpdateAPIView, DestroyAPIView, RetrieveAPIView):
     queryset = QuestionAnswer.objects.all()
     serializer_class = QuestionAnswerDetailSer
 
+
+class CategoryQuestionView(ListAPIView):
+    queryset = QuestionAnswer.objects.all()
+    serializer_class = QuestionAnswerDetailSer
+
+

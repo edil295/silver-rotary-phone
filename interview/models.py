@@ -16,4 +16,6 @@ class QuestionAnswer(models.Model):
     importance = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
-
+    def category(self):
+        category = QuestionAnswer.objects.filter(category_id=self)
+        return category
